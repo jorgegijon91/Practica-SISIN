@@ -14,7 +14,8 @@ Vagrant.configure("2") do |config|
       #Reiniciar y aplicar cambios
       sudo systemctl restart -y nginx
       # Instalación de los binarios de PHP, el driver mysqli y la extensión FPM para realizar peticiones de tipo RESTful
-
+      sudo apt-get install php php-mysqli
+      sudo apt-get install php7.0-fpm
 
       # Generar archivo SQL con los registros de los diferentes Módulos Profesionales
       echo "-- Insertar datos de ejemplo en la tabla 'modulos'" > /home/vagrant/datos_modulos.sql
